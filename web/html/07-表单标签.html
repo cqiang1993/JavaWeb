@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+    <!--
+        封装表单标签的范围
+            <form>
+
+                form包含属性
+                    action  :表单提交的地址(后台去提交)
+                    methid  :表单提交的方式(面试题)
+                        问题:常用的提交方式有哪些
+                        答:提交方式有很多，常用有两种，get和post。表单默认的提交方式就是get。get和post的区别
+                            * get方式进行提交时，参数列表显示到地址栏
+                            * post方式提交时，封装到请求体中
+
+                            * get方式提交时，安全级别比较低
+                            * post方式提交，安全级别比较高
+
+                            * get方式提交时，对参数列表的数据大小有限制。
+                            * post方式提交时，对大数据没有限制
+
+                用户的输入项的内容：例如：普通的文本框 普通的密码框 使用<input type="值的不同，显示不同的输入  text password">
+                ***** 注意：input标签上有两个属性name(必须要指定) value(不一定要指定)  name的名称 value的值
+                ***** 注意：name的属性必须要指定,value的属性不一定指定
+
+                type="text"         普通的文本框
+                type="password"     密码框
+                type="radio"        单选按钮
+                    添加一个属性：组的概念，指定相同的name属性
+                    有默认值：checked="checked"
+
+                type="checkbox"     多选按钮
+                    组的概念：指定相同的name属性
+                    有默认值：checked="checked"
+
+                type="file"         文件上传  name属性也是必须要指定的
+                type="hidden"       隐藏组件  用户不需要看到的数据，就可以使用隐藏组件隐藏起来
+                type="button"       按钮(和js语言和在一起使用)
+
+                type="sumbit"       提交：表单收集用户的数据，点击就可以把表单提交到后台
+                    ?sex=on                     单选按钮name属性的值
+                    ?username=zhaosi&sex=on
+                    ?username=张三&password=123&sex=man
+
+                type="reset"        重置：恢复到最初的状态
+
+                选择下拉框
+                <select name="必须制定的，并且指定在select标签上">
+                    <option value="必须指定的，指定在option标签上">北京</option>
+                    <option value="必须指定的，指定在option标签上">上海</option>
+                </select>
+                默认值:selected="selected"
+
+                文本域：写入多行多列的内容
+                <textarea>
+                    属性：
+                        rows 行
+                        cols 列
+                </textarea>
+
+            </form>
+    -->
+
+    <form action="success.html" method="post">
+        输入姓名:<input type="text" name="username"/><br />
+        输入密码:<input type="password" name="password"><br />
+        选择性别:<input type="radio" name="sex" value="man"/>男
+                <input type="radio" name="sex" checked="checked" value="woman"/>女<br />
+
+        选择爱好:<input type="checkbox" name="love" value="lq"/>篮球
+                <input type="checkbox" name="love" value="sj" checked="checked"/>睡觉
+                <input type="checkbox" name="love" value="ppq"/>兵乓球
+                <br/>
+        上传附件:<input type="file" name="myfile"><br/>
+        隐藏组件:<input type="hidden" name="userId" value="001"/> <br/>
+
+        选择城市:
+        <select name="city">
+            <option>--请选择--</option>
+            <option value="bj" selected="selected">北京</option>
+            <option value="sh">上海</option>
+        </select>
+            <br/>
+
+        个人简介:<textarea rows="10" cols="10"></textarea> <br />
+
+        <input type="button" value="我是按钮"/>
+        <input type="submit" value="注册"/>
+        <input type="reset" value="重置"/>
+    </form>
+
+</body>
+</html>
