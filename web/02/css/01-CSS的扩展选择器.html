@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Insert title here</title>
+
+    <style type="text/css">
+        /*div font{
+            color: red;
+        }
+
+        #haha,.hehe{
+            background-color: fuchsia;
+        }
+        !*.hehe{
+            background-color: blue;
+        }*!*/
+
+        /*!* 文本框在获取焦点的时候，设置样式 *!
+        input:FOCUS{
+            background-color: gray;
+        }*/
+
+        /*
+            未访问的状态
+            悬停状态
+            点击状态
+            访问完成状态
+            伪元素选择器，提供了4个状态的选择器
+            想使用超链接4个状态伪元素选择器的话，使用的顺序： L V H A
+        */
+        /* 未访问的状态 */
+
+        a:LINK {
+            text-decoration: none;
+        }
+
+        /* 访问完成 */
+
+        a:VISITED{
+            color: green;
+            font-size: 15px;
+        }
+
+        /* 悬停状态 */
+
+        a:HOVER{
+            color:red;
+            font-size: 25px;
+        }
+
+        /* 点击状态 */
+
+        a:ACTIVE{
+            color: blue;
+            font-size: 35px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <a href="http://www.youku.com">优酷</a>
+
+    <hr />
+
+    <input type="text" />
+
+    <div id="haha">这是div的<font>区域1</font></div>
+    <div>这是div的区域2</div>
+
+    <span class="hehe">这是span的<font>区域1</font></span>
+    <span>这是span的区域2</span>
+
+    <p>这是p的区域1</p>
+    <p>这是p的区域2</p>
+
+</body>
+</html>

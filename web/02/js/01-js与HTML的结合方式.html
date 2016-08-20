@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+</head>
+<body>
+	
+	<!--
+	    1.HTML的文件提供了一个标签<script type="text/javascript"> js代码 </script>
+	        特点：<script>标签可以放在页面的任意位置
+	    2.引入外部文件的方式：<script type="text/javascript" src="引入JS的文件的地址"></script>
+	        注意：如果src的属性引入了外部的文件，在<script>标签中间定义js代码不会执行
+
+	    3.扩展的问题：
+	        特点：<script>标签可以放在页面的任意位置。
+	        一般情况下：不是必须的。建议
+	        如果引入了外部的文件（外部文件没有直接操作HTML的标签，一般的情况下<head>中间）
+	        如果在本HTML文件上编写JS的代码，如果也没有直接操作HTML的标签，推荐放在</body>标签之后
+	 -->
+
+    <!--<script type="text/javascript" src="demo.js">
+        // js代码
+        // 弹出一个提示框
+    </script>
+
+    <script type="text/javascript">
+        // js代码
+        // 弹出一个提示框
+        window.alert("哈哈");
+    </script>-->
+
+
+
+    <span id="spanId">我是span的区域</span>
+
+
+
+
+</body>
+    <script type="text/javascript">
+        // 写JS代码，弹出span标签中间的文本内容
+        alert(document.getElementById("spanId").innerHTML)
+    </script>
+</html>
