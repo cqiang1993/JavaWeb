@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        /*
+            java定义方法
+            public String run(参数列表 int x,String y){
+                .....
+                return null;
+            }
+            js中定义方法
+            function 方法名成(参数列表(没有var的关键字) x,y){
+                ... 方法体
+                return 返回值;     如果方法有返回值,直接写返回值,如果没有返回值,return可以省略不写
+            }
+            js没有重载的方式
+            arguments数组存入传入进来的参数
+            匿名函数:没有名称的函数.起个名称.
+                xxxx.onclick = function(){
+                    // 执行
+                }
+        */
+
+        //没有参数
+        function show(){
+            // 弹出提示框
+            alert("hehe");
+            return ;
+        }
+        //调用show方法,执行
+        //show();
+
+        //求和的方法
+        function getSum(x,y) {
+            // 在方法的内部,有一个数组,装来装传入过来的参数
+            // arguments
+            //alert(arguments.length);
+            var sum = x+y;
+            return sum;
+        }
+
+        //调用求和的方法
+        //var sum = getSum(5,6);
+        //alert(sum)
+
+        var sum = getSum(1,5,7);
+        // alert(sum);
+
+        var run =function () {
+            //方法
+            alert("run方法");
+        };
+
+        run();
+
+    </script>
+
+
+</body>
+</html>
